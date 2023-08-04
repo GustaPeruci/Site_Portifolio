@@ -1,0 +1,104 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif; /* Usando a fonte Roboto como primeira opção */
+  background-color: #f9f9f9; /* Fundo cinza claro */
+  color: #333333; /* Fonte cinza escuro */
+}
+
+header {
+  background-color: #f0f0f0; /* Cor de fundo do cabeçalho */
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700; /* Negrito para o título */
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333333; /* Cor dos links no cabeçalho (cinza escuro) */
+}
+
+main {
+  max-width: 800px; /* Limitando a largura do conteúdo principal */
+  margin: 0 auto; /* Centralizando o conteúdo na página */
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centralizando os botões horizontalmente */
+  margin-top: 50px; /* Espaçamento acima dos botões */
+}
+
+.buttons a {
+  margin: 0 10px; /* Espaçamento entre os botões */
+  padding: 15px 30px; /* Tamanho maior dos botões */
+  background-color: #f9f9f9; /* Cor de fundo dos botões (cinza claro) */
+  color: #333333; /* Cor do texto dos botões (cinza escuro) */
+  text-decoration: none;
+  border: none; /* Removendo a borda dos botões */
+  border-radius: 5px;
+}
+
+.buttons a:hover {
+  background-color: #333333; /* Cor de fundo ao passar o mouse (cinza escuro) */
+  color: #ffffff; /* Cor do texto ao passar o mouse (branco) */
+}
+
+.buttons a.active {
+  font-weight: bold; /* Destaca o botão ativo com fonte em negrito */
+  color: #ffffff; /* Cor branca para o botão ativo */
+  background-color: #333333; /* Cor de fundo do botão ativo (preto) */
+}
+
+.project {
+  margin-bottom: 40px;
+  border: 1px solid #e0e0e0; /* Borda sutil ao redor dos projetos */
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 700; /* Negrito para os títulos dos projetos */
+}
+
+footer {
+  background-color: #f0f0f0; /* Cor de fundo do rodapé */
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Estilos para links */
+a {
+  color: #333333; /* Cor cinza escuro para links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none; /* Removendo o sublinhado ao passar o mouse */
+}
+
+/* Estilos específicos para o index.html */
+main.index-content {
+  padding: 150px;
+  font-size: larger;
+}
+
+/* Estilos para telas menores (responsividade) */
+@media (max-width: 768px) {
+  /* ... (estilos para telas menores) ... */
+}
