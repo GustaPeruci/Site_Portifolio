@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-mode="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre</title>
+  <title>Contatos</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <a href="index.html"><h1>Gustavo C. Assis</h1></a>
+    <input type="checkbox" id="dark-mode-input" />
+    <label class="dark-mode-toggler" for="dark-mode-input">
+      <div></div>
+    </label>
     <nav>
-      <a href="sobre.html" class="active">Sobre</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="contatos.html">Contatos</a>
+      <a href="about.html">Sobre</a>
+      <a href="projects.html">Projetos</a>
+      <a href="contacts.html" class="active">Contatos</a>
     </nav>
   </header>
   
   <main>
-    <h2>Sobre mim</h2>
+    <h2>Entre em Contato</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
+    <p>Email: contato@gustavocassis.com</p>
+    <p>Telefone: (XX) XXXX-XXXX</p>
   </main>
   
   <footer>
     <p>&copy; 2023 Gustavo C. Assis. Todos os direitos reservados.</p>
   </footer>
+  
+  <script src="js/dark-mode.js"></script>
 </body>
 </html>

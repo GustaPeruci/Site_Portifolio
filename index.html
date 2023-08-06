@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-mode="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portfólio</title>
+  <title>Gustavo C. Assis</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <h1>Gustavo C. Assis</h1>
+    <input type="checkbox" id="dark-mode-input" />
+    <label class="dark-mode-toggler" for="dark-mode-input">
+      <div></div>
+    </label>
   </header>
 
   <main class="index-content">
     <section class="buttons">
-      <a href="sobre.html">Sobre</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="contatos.html">Contatos</a>
+      <a href="about.html">Sobre</a>
+      <a href="projects.html">Projetos</a>
+      <a href="contacts.html">Contatos</a>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2023 Gustavo C. Assis. Todos os direitos reservados.</p>
   </footer>
+  
+  <script src="js/dark-mode.js"></script>
 </body>
 </html>

@@ -1,21 +1,21 @@
-/* Estilos gerais */
+/*Initial Style - Light mode*/
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Arial, sans-serif; /* Usando a fonte Roboto como primeira opção */
-  background-color: #f9f9f9; /* Fundo cinza claro */
-  color: #333333; /* Fonte cinza escuro */
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333333;
 }
 
 header {
-  background-color: #f0f0f0; /* Cor de fundo do cabeçalho */
+  background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
-  font-weight: 700; /* Negrito para o título */
+  font-weight: 700;
 }
 
 nav {
@@ -25,55 +25,55 @@ nav {
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #333333; /* Cor dos links no cabeçalho (cinza escuro) */
+  color: #333333;
 }
 
 main {
-  max-width: 800px; /* Limitando a largura do conteúdo principal */
-  margin: 0 auto; /* Centralizando o conteúdo na página */
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .buttons {
   display: flex;
-  justify-content: center; /* Centralizando os botões horizontalmente */
-  margin-top: 50px; /* Espaçamento acima dos botões */
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .buttons a {
-  margin: 0 10px; /* Espaçamento entre os botões */
-  padding: 15px 30px; /* Tamanho maior dos botões */
-  background-color: #f9f9f9; /* Cor de fundo dos botões (cinza claro) */
-  color: #333333; /* Cor do texto dos botões (cinza escuro) */
+  margin: 0 10px;
+  padding: 15px 30px;
+  background-color: #f9f9f9;
+  color: #333333;
   text-decoration: none;
-  border: none; /* Removendo a borda dos botões */
+  border: none;
   border-radius: 5px;
 }
 
 .buttons a:hover {
-  background-color: #333333; /* Cor de fundo ao passar o mouse (cinza escuro) */
-  color: #ffffff; /* Cor do texto ao passar o mouse (branco) */
+  background-color: #333333;
+  color: #ffffff;
 }
 
 .buttons a.active {
-  font-weight: bold; /* Destaca o botão ativo com fonte em negrito */
-  color: #ffffff; /* Cor branca para o botão ativo */
-  background-color: #333333; /* Cor de fundo do botão ativo (preto) */
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #333333;
 }
 
 .project {
   margin-bottom: 40px;
-  border: 1px solid #e0e0e0; /* Borda sutil ao redor dos projetos */
+  border: 1px solid #e0e0e0;
   padding: 20px;
 }
 
 h2 {
   margin-top: 0;
-  font-weight: 700; /* Negrito para os títulos dos projetos */
+  font-weight: 700;
 }
 
 footer {
-  background-color: #f0f0f0; /* Cor de fundo do rodapé */
+  background-color: #f0f0f0;
   padding: 10px;
   text-align: center;
   position: fixed;
@@ -82,23 +82,104 @@ footer {
   width: 100%;
 }
 
-/* Estilos para links */
 a {
-  color: #333333; /* Cor cinza escuro para links */
+  color: #333333;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none; /* Removendo o sublinhado ao passar o mouse */
+  text-decoration: none;
 }
 
-/* Estilos específicos para o index.html */
 main.index-content {
   padding: 150px;
   font-size: larger;
 }
 
-/* Estilos para telas menores (responsividade) */
+/*Dark mode style*/
+
+body.dark-mode {
+  background-color: #222222;
+  color: #f9f9f9;
+}
+
+body.dark-mode header {
+  background-color: #333333;
+  color: #f9f9f9;
+}
+
+body.dark-mode header a {
+  color: #f9f9f9; /* Altera a cor do link dentro do header */
+}
+
+body.dark-mode main {
+  background-color: #222222;
+}
+
+body.dark-mode .buttons a {
+  background-color: #222222;
+  color: #f9f9f9;
+}
+
+body.dark-mode .buttons a:hover {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+body.dark-mode .buttons a.active {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+body.dark-mode .project {
+  border-color: #444444;
+}
+
+body.dark-mode h2 {
+  color: #f9f9f9;
+}
+
+body.dark-mode footer {
+  background-color: #333333;
+  color: #f9f9f9;
+}
+
+/* Estilos para o rodapé no dark mode */
+body.dark-mode footer p {
+  color: #f9f9f9;
+}
+
+/* Dark mode button style*/
+#dark-mode-input {
+  display: none;
+}
+
+label.dark-mode-toggler {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+label.dark-mode-toggler div {
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+#dark-mode-input:checked + label.dark-mode-toggler div {
+  transform: translateX(20px);
+}
+
+/*Responsiveness*/
 @media (max-width: 768px) {
   /* ... (estilos para telas menores) ... */
 }
