@@ -24,26 +24,70 @@
   
   <main>
     <h2>Meus Projetos</h2>
-    <section class="project">
-      <h3>Projeto 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
-    </section>
-    
-    <section class="project">
-      <h3>Projeto 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
-    </section>
-    
-    <section class="project">
-      <h3>Projeto 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
-    </section>
+    <div class="project-slider">
+      <div class="slider-arrow prev-arrow">&lt;</div>
+      <div class="slider-content">      
+      <section class="project">
+        <h3>Projeto PAC III</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
+        
+      </section>
+
+      <section class="project">
+        <h3>Projeto 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
+      </section>
+      
+      <section class="project">
+        <h3>Projeto 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu libero euismod, consectetur lorem at, luctus purus.</p>
+      </section>
+      <div class="slider-arrow next-arrow">&gt;</div>
+    </div>
   </main>
+
+  <script>
+    // Seleciona todos os projetos
+const projects = document.querySelectorAll('.project');
+
+// Seleciona o slider
+const slider = document.querySelector('.project-slider');
+
+// Seleciona as setas
+const prevArrow = document.querySelector('.prev-arrow');
+const nextArrow = document.querySelector('.next-arrow');
+
+let index = 0; // Índice do projeto atual
+
+function showProject(index) {
+  // Esconde todos os projetos
+  projects.forEach(project => {
+    project.style.display = 'none';
+  });
+
+  // Mostra o projeto atual
+  projects[index].style.display = 'block';
+}
+
+// Inicializa exibindo o primeiro projeto
+showProject(index);
+
+// Adiciona o evento de clique para avançar para o próximo projeto
+slider.addEventListener('click', (event) => {
+  if (event.target === nextArrow) {
+    index = (index + 1) % projects.length; // Avança para o próximo projeto
+  } else if (event.target === prevArrow) {
+    index = (index - 1 + projects.length) % projects.length; // Retrocede para o projeto anterior
+  }
+
+  showProject(index);
+});
+
+  </script>
   
   <footer>
     <p>&copy; 2023 Gustavo C. Assis. Todos os direitos reservados.</p>
   </footer>
-  
   <script src="js/dark-mode.js"></script>
 </body>
 </html>

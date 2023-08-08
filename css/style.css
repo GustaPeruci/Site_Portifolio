@@ -1,4 +1,4 @@
-/*Initial Style - Light mode*/
+/* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
@@ -61,10 +61,42 @@ main {
   background-color: #333333;
 }
 
+/* Estilos específicos para .project no light mode */
 .project {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   border: 1px solid #e0e0e0;
   padding: 20px;
+}
+
+.project p{
+  text-align: justify;
+  margin-right: 5px
+}
+
+/* Estilos específicos para .project no dark mode */
+body.dark-mode .project {
+  border-color: #444444;
+  background-color: #222222;
+  color: #f9f9f9;
+}
+
+/* Estilo das setas */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.prev-arrow {
+  left: 20px;
+}
+
+.next-arrow {
+  right: 20px;
 }
 
 h2 {
@@ -96,8 +128,7 @@ main.index-content {
   font-size: larger;
 }
 
-/*Dark mode style*/
-
+/* Dark mode style */
 body.dark-mode {
   background-color: #222222;
   color: #f9f9f9;
@@ -109,7 +140,7 @@ body.dark-mode header {
 }
 
 body.dark-mode header a {
-  color: #f9f9f9; /* Altera a cor do link dentro do header */
+  color: #f9f9f9;
 }
 
 body.dark-mode main {
@@ -133,6 +164,8 @@ body.dark-mode .buttons a.active {
 
 body.dark-mode .project {
   border-color: #444444;
+  background-color: #222222;
+  color: #f9f9f9;
 }
 
 body.dark-mode h2 {
@@ -149,7 +182,7 @@ body.dark-mode footer p {
   color: #f9f9f9;
 }
 
-/* Dark mode button style*/
+/* Dark mode button style */
 #dark-mode-input {
   display: none;
 }
@@ -179,7 +212,7 @@ label.dark-mode-toggler div {
   transform: translateX(20px);
 }
 
-/*Responsiveness*/
+/* Responsiveness */
 @media (max-width: 768px) {
   /* ... (estilos para telas menores) ... */
 }
